@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="theme-color" content="#0b0b10" />
+  <title>عالم عبد الرحمن & رؤى الخاص ❤️</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Optional: Animate.css (still supported) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- Better Arabic font (optional but جميل جدًا) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Romantic Pro Palette */
+      --bg0: #07070b;
+      --bg1: #0b0b10;
+      --bg2: #120b12;
+
+      --pink1: #ff4d6d;
+      --pink2: #c9184a;
+      --rose1: #ff758f;
+      --rose2: #ffb3c1;
+
+      --gold: #e2b697;
+      --txt: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.62);
+
+      --glass: rgba(255,255,255,.06);
+      --glass2: rgba(255,255,255,.09);
+      --border: rgba(255,255,255,.14);
+
+      --shadow: 0 18px 50px rgba(0,0,0,.55);
+      --shadow2: 0 10px 30px rgba(0,0,0,.45);
+
+      --rad-xl: 34px;
+      --rad-lg: 26px;
+      --rad-md: 20px;
+
+      --ease: cubic-bezier(.2,.9,.2,1);
+      --primary-grad: linear-gradient(135deg, var(--pink1), var(--pink2));
+      --secondary-grad: linear-gradient(135deg, var(--rose1), var(--rose2));
+      --gold-grad: linear-gradient(135deg, #fff, var(--rose1), var(--gold));
+    }
+
+    *{ box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: "Cairo", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(1200px 800px at 70% 15%, rgba(255,77,109,.18), transparent 55%),
+                  radial-gradient(900px 700px at 15% 70%, rgba(226,182,151,.10), transparent 60%),
+                  linear-gradient(180deg, var(--bg0), var(--bg1));
+      color: var(--txt);
+      overflow: hidden; /* page-1 */
+    }
+
+    /* --- Background Hearts (all pages) --- */
+    .hearts-bg{
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 8;
+      overflow: hidden;
+      opacity: .9;
+    }
+    .heart-particle{
+      position:absolute;
+      top:-12%;
+      color: var(--pink1);
+      filter: drop-shadow(0 0 10px rgba(255,77,109,.55));
+      animation: fall linear infinite;
+      will-change: transform, opacity;
+    }
+    @keyframes fall{
+      0%{ transform: translateY(0) rotate(0deg); opacity:0; }
+      12%{ opacity:.75; }
+      85%{ opacity:.75; }
+      100%{ transform: translateY(115vh) rotate(360deg); opacity:0; }
+    }
+
+    /* Reduce motion احترامًا لتفضيل المستخدم */
+    @media (prefers-reduced-motion: reduce){
+      .heart-particle{ animation: none !important; display:none; }
+      *{ scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    }
+
+    /* --- Page 1 (Login) --- */
+    #page-1{
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      z-index: 9999;
+      background:
+        radial-gradient(900px 500px at 50% 30%, rgba(255,77,109,.20), transparent 55%),
+        radial-gradient(700px 450px at 20% 80%, rgba(226,182,151,.12), transparent 60%),
+        linear-gradient(180deg, #0a0a10, #07070b);
+      transition: transform 1.2s var(--ease), opacity 1.2s var(--ease);
+    }
+
+    .login-card{
+      width: min(92vw, 420px);
+      padding: 44px 28px 30px;
+      border-radius: var(--rad-xl);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .login-card::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(500px 200px at 50% 0%, rgba(255,117,143,.22), transparent 60%);
+      pointer-events:none;
+    }
+
+    .main-title{
+      font-weight: 900;
+      margin: 0 0 10px;
+      letter-spacing: .2px;
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .sub{
+      margin:0 0 26px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .field{
+      width: 100%;
+      padding: 16px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      color: #fff;
+      text-align:center;
+      outline: none;
+      transition: .25s var(--ease);
+      box-shadow: 0 10px 25px rgba(0,0,0,.20) inset;
+    }
+    .field::placeholder{ color: rgba(255,255,255,.55); }
+    .field:focus{
+      border-color: rgba(255,77,109,.7);
+      background: rgba(255,255,255,.09);
+      box-shadow: 0 0 0 6px rgba(255,77,109,.10);
+    }
+
+    .btn{
+      margin-top: 14px;
+      width: 100%;
+      border: none;
+      padding: 16px 18px;
+      border-radius: 18px;
+      font-weight: 900;
+      color: #fff;
+      background: var(--primary-grad);
+      box-shadow: 0 14px 30px rgba(201,24,74,.25);
+      cursor: pointer;
+      transition: transform .18s var(--ease), filter .18s var(--ease);
+    }
+    .btn:hover{ filter: brightness(1.05); }
+    .btn:active{ transform: scale(.98); }
+
+    .hint{
+      margin-top: 12px;
+      font-size: 11px;
+      color: rgba(255,255,255,.55);
+      line-height: 1.6;
+    }
+
+    /* small shake for wrong password */
+    .shake{
+      animation: shake .42s var(--ease);
+    }
+    @keyframes shake{
+      0%{ transform: translateX(0); }
+      20%{ transform: translateX(10px); }
+      40%{ transform: translateX(-10px); }
+      60%{ transform: translateX(8px); }
+      80%{ transform: translateX(-8px); }
+      100%{ transform: translateX(0); }
+    }
+
+    /* --- Page 2 (Main) --- */
+    #page-2{
+      display:none;
+      opacity:0;
+      height:100vh;
+      overflow-y:auto;
+      position: relative;
+      z-index: 5;
+      transition: opacity 1.1s var(--ease);
+      background:
+        radial-gradient(900px 700px at 70% 15%, rgba(255,77,109,.12), transparent 60%),
+        radial-gradient(800px 600px at 10% 70%, rgba(226,182,151,.09), transparent 60%),
+        linear-gradient(180deg, #0a0a10, #07070b);
+    }
+
+    .container{
+      padding: 26px 18px 90px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    header.hero{
+      text-align:center;
+      padding: 36px 0 18px;
+    }
+    header.hero h2{
+      margin:0 0 10px;
+      font-size: clamp(28px, 5vw, 38px);
+    }
+    header.hero p{
+      margin:0;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .since{
+      text-align:center;
+      margin: 16px 0 10px;
+      color: rgba(255,117,143,.95);
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+
+    .counter{
+      margin: 18px 0 22px;
+      padding: 16px;
+      border-radius: var(--rad-xl);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .counter-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .count-box{
+      border-radius: 18px;
+      padding: 14px 10px;
+      text-align:center;
+      background:
+        linear-gradient(135deg, rgba(255,77,109,.95), rgba(201,24,74,.92));
+      box-shadow: 0 10px 22px rgba(201,24,74,.22);
+      position: relative;
+      overflow:hidden;
+    }
+    .count-box::after{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      background: radial-gradient(220px 120px at 30% 20%, rgba(255,255,255,.18), transparent 60%);
+      pointer-events:none;
+    }
+    .count-num{
+      display:block;
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+    .count-box small{
+      display:block;
+      margin-top: 6px;
+      font-size: 11px;
+      opacity: .9;
+      font-weight: 700;
+    }
+
+    /* Music Bar */
+    .music-bar{
+      margin: 18px 0 26px;
+      padding: 14px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow2);
+      display:flex;
+      align-items:center;
+      gap: 14px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .play-icon{
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display:grid;
+      place-items:center;
+      background: var(--primary-grad);
+      box-shadow: 0 12px 26px rgba(201,24,74,.25);
+      cursor:pointer;
+      transition: transform .18s var(--ease), filter .18s var(--ease);
+      user-select:none;
+    }
+    .play-icon:hover{ filter: brightness(1.06); }
+    .play-icon:active{ transform: scale(.96); }
+
+    .track-title{ font-size: 14px; font-weight: 900; }
+    .track-sub{ font-size: 11px; color: var(--muted); }
+
+    /* Gallery Cards */
+    .gallery{
+      display:flex;
+      flex-direction:column;
+      gap: 18px;
+    }
+
+    .glass-card{
+      border-radius: var(--rad-xl);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.14);
+      overflow:hidden;
+      box-shadow: var(--shadow2);
+      transform: translateY(26px);
+      opacity: 0;
+      transition: transform .9s var(--ease), opacity .9s var(--ease);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .glass-card.show{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .glass-card .img-wrap{
+      position: relative;
+      overflow:hidden;
+    }
+    .glass-card img{
+      width:100%;
+      display:block;
+      transform: scale(1.02);
+      transition: transform 1.2s var(--ease), filter 1.2s var(--ease);
+      filter: saturate(1.03) contrast(1.02);
+    }
+    .glass-card:hover img{
+      transform: scale(1.06);
+      filter: saturate(1.10) contrast(1.03);
+    }
+    .glass-card .cap{
+      padding: 18px 18px 20px;
+      font-size: 14px;
+      line-height: 1.9;
+      color: rgba(255,255,255,.88);
+      text-align: center;
+    }
+
+    /* CTA bottom */
+    .cta{
+      display:flex;
+      justify-content:center;
+      padding-top: 18px;
+    }
+    .cta .btn{
+      width:auto;
+      padding: 14px 44px;
+      border-radius: 18px;
+    }
+
+    /* --- Page 3 (Message) --- */
+    #page-3{
+      display:none;
+      opacity:0;
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background:
+        radial-gradient(900px 700px at 50% 25%, rgba(255,77,109,.14), transparent 60%),
+        linear-gradient(180deg, #050509, #000);
+      transition: opacity .8s var(--ease);
+      overflow-y:auto;
+      padding: 18px;
+    }
+
+    .floating-message{
+      width: min(92vw, 560px);
+      margin: 36px auto;
+      border-radius: 42px;
+      padding: 30px 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,77,109,.35);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      text-align:center;
+    }
+    .floating-message h2{
+      margin:0 0 14px;
+      color: rgba(255,117,143,.98);
+      font-weight: 900;
+    }
+    #longMessage{
+      margin:0;
+      text-align: right;
+      white-space: pre-line;
+      font-size: 15px;
+      line-height: 2.0;
+      color: rgba(255,255,255,.88);
+    }
+    .back{
+      margin-top: 18px;
+      background: none;
+      border: none;
+      color: rgba(255,77,109,.95);
+      cursor:pointer;
+      font-weight: 900;
+      padding: 10px 14px;
+    }
+    .back:hover{ text-decoration: underline; }
+
+    /* Simple toast */
+    .toast{
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 18px;
+      z-index: 12000;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(15,15,20,.92);
+      border: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.9);
+      box-shadow: var(--shadow2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s var(--ease), transform .3s var(--ease);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      font-size: 13px;
+      line-height: 1.6;
+      max-width: min(92vw, 520px);
+      text-align:center;
+    }
+    .toast.show{
+      opacity: 1;
+      transform: translateX(-50%) translateY(-6px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hearts-bg" id="hearts-container" aria-hidden="true"></div>
+
+  <!-- PAGE 1 -->
+  <section id="page-1" aria-label="صفحة الدخول">
+    <div class="login-card animate__animated animate__fadeInUp">
+      <h1 class="main-title" style="font-size: 34px;">عبد الرحمن & رؤى</h1>
+      <p class="sub">Our Eternal Love Story</p>
+
+      <input
+        type="text"
+        id="passInput"
+        class="field"
+        inputmode="numeric"
+        placeholder="اكتبي التاريخ (السنة/الشهر/اليوم)"
+        autocomplete="off"
+      />
+
+      <button class="btn" id="loginBtn">دخلي كلمة السر يا روحي ❤️</button>
+
+      <!-- تم حذف التلميح فقط -->
+    </div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section id="page-2" aria-label="الصفحة الرئيسية">
+    <div class="container">
+      <header class="hero">
+        <h2 class="main-title">حكايتنا ❤️</h2>
+        <p>كل ثانية معاكي هي عُمر</p>
+      </header>
+
+      <div class="since">منذ أن بدأت القصة 2026/1/14</div>
+
+      <div class="counter" role="group" aria-label="عداد الوقت منذ بداية القصة">
+        <div class="counter-grid">
+          <div class="count-box"><span id="years" class="count-num">0</span><small>سنة</small></div>
+          <div class="count-box"><span id="months" class="count-num">0</span><small>شهر</small></div>
+          <div class="count-box"><span id="days" class="count-num">0</span><small>يوم</small></div>
+          <div class="count-box"><span id="hours" class="count-num">0</span><small>ساعة</small></div>
+          <div class="count-box"><span id="mins" class="count-num">0</span><small>دقيقة</small></div>
+          <div class="count-box"><span id="secs" class="count-num">0</span><small>ثانية</small></div>
+        </div>
+      </div>
+
+      <div class="music-bar" aria-label="مشغل الموسيقى">
+        <div class="play-icon" id="playBtn" title="تشغيل/إيقاف">
+          <i id="pIcon" class="fa-solid fa-play"></i>
+        </div>
+        <div style="flex:1">
+          <div class="track-title">نور عيني</div>
+          <div class="track-sub">لحظاتنا الخاصة 🎵</div>
+        </div>
+        <audio id="loveSong" loop src="https://files.catbox.moe/ll4n4b.mp3"></audio>
+      </div>
+
+      <div class="gallery" aria-label="معرض الصور">
+        <div class="glass-card">
+          <div class="img-wrap"><img loading="lazy" src="https://d.top4top.io/p_36808p5dd1.jpg" alt="صورة 1"></div>
+          <div class="cap">بحبك أكتر من أي حاجة في الدنيا، حتى الكلام مش قادر يوصف قد إيه قلبي متعلق بيكي. كل مرة بشوفك فيها، قلبي بيرقص فرح، وكل مرة أسمع صوتك أحس إن الدنيا كلها حلوة ربنا يخليكي ليا ي روحي🦋</div>
+        </div>
+
+        <div class="glass-card">
+          <div class="img-wrap"><img loading="lazy" src="https://b.top4top.io/p_3680sgkkl1.jpg" alt="صورة 2"></div>
+          <div class="cap">رزقني الله بك وأيقنت أنك أجمل أرزاقي أنت جميعي أنت نعيمي أنت الكثير في عيناي دمت لي كل العمر🦋♥️</div>
+        </div>
+
+        <div class="glass-card">
+          <div class="img-wrap"><img loading="lazy" src="https://c.top4top.io/p_3680iic071.jpg" alt="صورة 3"></div>
+          <div class="cap">ليتكِ بجانبي لأحتضنكِ كلما اشتقتُ إليكِ.🥹❤</div>
+        </div>
+
+        <div class="glass-card">
+          <div class="img-wrap"><img loading="lazy" src="https://l.top4top.io/p_36803pkdh1.jpg" alt="صورة 4"></div>
+          <div class="cap">اكتب دمت لي شيئا جميلا لا ينتهي ♥️</div>
+        </div>
+
+        <div class="glass-card">
+          <div class="img-wrap"><img loading="lazy" src="https://a.top4top.io/p_3680rn87n1.jpg" alt="صورة 5"></div>
+          <div class="cap">انتي من امتلكتك في الدنيا يا من احبك قلبي واشتق لكي يا من رايتك عيني ولم ترا سواكي بحبك R♥️🌍A</div>
+        </div>
+      </div>
+
+      <div class="cta">
+        <button class="btn" id="giftBtn">في حاجة أخيرة ليكي.. 🎁</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section id="page-3" aria-label="صفحة الرسالة">
+    <div class="floating-message">
+      <h2>رسالتي ليكي ❤️</h2>
+      <p id="longMessage">
+أنا بحبك متزعلش مني ♥️
+أنا عارفه اني بزعلك كتير بس والله مليش غيرك في الدنيا دي انت اهلي وصحابي ودنيتي كلها وسندي وعيني اللي بشوف بيها كمان أنّت ملجأي الوحيد من قسوة الدنيا دي كلها أنا والله مقدرش استغني عنك أبدا والله بحبك اوي والله عارفه انك استحملتني كتير ♥️
+لو اعرف اخد الوجع كله من قلبك واعيشه لوحدي كنت عملت كده لو اقدر اخد من عمري وأديلك وتعيش فوق العمر عمر كنت عملتها لو ينفع اديك عيوني تشوف نفسك انت بالنسبالي اي هتعرف انك كل حياتي♥️
+انت الوحيد اللي عرفت تغيرني للأحسن بقيت ابويا واخويا وأهلي كلهم خليتني مش محتاجه لصحاب في حيات عشان انت صاحبي قبل حبيبي 🥹♥️
+عارفه اني غلطت في حقك وضايقك بس والله حقك عليا مقدرش علي زعلك والله عارفه ان بقينا نتخانق كتير بس نعدي كل دا مع بعض اي حاجه إلا انك تبعد هفضل احاول لاخر نفس فيا اللي عيشته معاك مينفعش مع غيرك ♥️
+بحبك والله وحقك عليا ي نور عيني 🌎♥️
+      </p>
+      <button class="back" id="backBtn">العودة للبداية</button>
+    </div>
+  </section>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ========= Helpers =========
+    const $ = (id) => document.getElementById(id);
+
+    function toast(msg){
+      const t = $("toast");
+      t.textContent = msg;
+      t.classList.add("show");
+      clearTimeout(toast._t);
+      toast._t = setTimeout(()=> t.classList.remove("show"), 2400);
+    }
+
+    // ========= Hearts =========
+    function createHearts() {
+      const container = $("hearts-container");
+      const maxHearts = 24; // limit for performance
+      setInterval(() => {
+        if (container.childElementCount > maxHearts) return;
+
+        const heart = document.createElement("i");
+        heart.className = "fa-solid fa-heart heart-particle";
+
+        heart.style.left = (Math.random() * 100) + "vw";
+        const duration = (Math.random() * 3.2 + 4.2); // 4.2 - 7.4s
+        heart.style.animationDuration = duration + "s";
+        heart.style.fontSize = (Math.random() * 16 + 10) + "px";
+        heart.style.opacity = (Math.random() * 0.45 + 0.25).toFixed(2);
+
+        // random pink shades
+        const hue = 345 + Math.random() * 18; // near pink
+        heart.style.color = `hsl(${hue} 90% 65%)`;
+
+        container.appendChild(heart);
+        setTimeout(() => heart.remove(), duration * 1000);
+      }, 260);
+    }
+
+    // ========= Pages =========
+    const START_STR = "2026/1/14";
+    const START_DATE = new Date("2026-01-14T00:00:00");
+
+    function showPage2(){
+      $("page-1").style.transform = "translateY(-105%)";
+      $("page-1").style.opacity = "0.2";
+
+      $("page-2").style.display = "block";
+      document.body.style.overflow = "auto";
+
+      setTimeout(() => $("page-2").style.opacity = "1", 80);
+
+      // Try play (needs user action; this is still after click so ok)
+      const song = $("loveSong");
+      song.play().catch(() => {});
+      $("pIcon").className = "fa-solid fa-pause";
+
+      startCounter();
+      setupCardReveal();
+      toast("يا أهلاً بروحي ❤️");
+    }
+
+    function showPage3(){
+      $("page-3").style.display = "block";
+      setTimeout(() => $("page-3").style.opacity = "1", 40);
+    }
+
+    function backToStart(){
+      // Safer than reload? We'll keep reload like your original
+      location.reload();
+    }
+
+    // ========= Login =========
+    function normalizePass(v){
+      // remove spaces + unify separators
+      return String(v || "")
+        .trim()
+        .replace(/\s+/g,"")
+        .replace(/-/g,"/")
+        .replace(/\./g,"/");
+    }
+
+    function goToPage2(){
+      const input = $("passInput");
+      const pass = normalizePass(input.value);
+
+      if(pass === START_STR){
+        showPage2();
+      }else{
+        const card = document.querySelector(".login-card");
+        card.classList.remove("shake");
+        void card.offsetWidth; // restart animation
+        card.classList.add("shake");
+        toast("الباسورد غلط يا روحي ركزي 😂");
+      }
+    }
+
+    // allow Enter
+    $("passInput").addEventListener("keydown", (e)=>{
+      if(e.key === "Enter") goToPage2();
+    });
+    $("loginBtn").addEventListener("click", goToPage2);
+
+    // ========= Counter (accurate calendar diff) =========
+    function diffCalendar(start, end){
+      // Ensure end >= start
+      if(end < start) return {years:0, months:0, days:0, hours:0, mins:0, secs:0};
+
+      let years = end.getFullYear() - start.getFullYear();
+      let months = end.getMonth() - start.getMonth();
+      let days = end.getDate() - start.getDate();
+      let hours = end.getHours() - start.getHours();
+      let mins = end.getMinutes() - start.getMinutes();
+      let secs = end.getSeconds() - start.getSeconds();
+
+      // borrow seconds
+      if(secs < 0){ secs += 60; mins--; }
+      if(mins < 0){ mins += 60; hours--; }
+      if(hours < 0){ hours += 24; days--; }
+
+      // borrow days (depends on previous month length)
+      if(days < 0){
+        // last day of previous month of "end"
+        const prevMonth = new Date(end.getFullYear(), end.getMonth(), 0).getDate();
+        days += prevMonth;
+        months--;
+      }
+
+      if(months < 0){ months += 12; years--; }
+      if(years < 0) years = 0;
+
+      return {years, months, days, hours, mins, secs};
+    }
+
+    let counterTimer = null;
+    function startCounter(){
+      if(counterTimer) clearInterval(counterTimer);
+
+      const tick = () => {
+        const now = new Date();
+        const d = diffCalendar(START_DATE, now);
+
+        $("years").innerText = d.years;
+        $("months").innerText = d.months;
+        $("days").innerText = d.days;
+        $("hours").innerText = d.hours;
+        $("mins").innerText = d.mins;
+        $("secs").innerText = d.secs;
+      };
+
+      tick();
+      counterTimer = setInterval(tick, 1000);
+    }
+
+    // ========= Music =========
+    function toggleMusic(){
+      const a = $("loveSong");
+      const i = $("pIcon");
+      if(a.paused){
+        a.play().catch(()=>{});
+        i.className = "fa-solid fa-pause";
+      }else{
+        a.pause();
+        i.className = "fa-solid fa-play";
+      }
+    }
+    $("playBtn").addEventListener("click", toggleMusic);
+
+    // ========= Card reveal (better than scroll) =========
+    function setupCardReveal(){
+      const cards = document.querySelectorAll(".glass-card");
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add("show");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      cards.forEach(c => io.observe(c));
+    }
+
+    // ========= Buttons =========
+    $("giftBtn").addEventListener("click", showPage3);
+    $("backBtn").addEventListener("click", backToStart);
+
+    // ========= Init =========
+    window.addEventListener("load", () => {
+      createHearts();
+      // nice default focus
+      setTimeout(()=> $("passInput").focus(), 250);
+    });
+  </script>
+</body>
+</html>
